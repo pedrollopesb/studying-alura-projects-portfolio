@@ -11,13 +11,14 @@
 
 /* Para selecionar a tag "body", onde está todo o conteúdo principal da página */
 body {
-  height: 100vh;
+  /* height: 100vh; */
   box-sizing: border-box;
   background-color: #000000;
   color: #F6F6F6;
 }
 
-/* height: 100vh; - A altura da nossa tela está sendo definida para 100% da nossa viewport (ou seja, 100% da tela do nosso navegador) */
+/* height: 100vh; - A altura inicial da nossa tela está sendo definida para 100% da nossa viewport (ou seja, 100% da tela do nosso navegador) */
+/* A propriedade acima foi desabilitada, pois conforme o projeto foi crescendo, começou a ultrapassar o tamanho de tela, sendo assim, para o footer ficar dentro do body, foi necessário desabilitar*/
 /* box-sizing: border-box; - Irá garantir que o elemento filho seja contido no elemento pai, contabilizando as bordas e preenchimentos do elemento */
 
 /* Para selecionar uma classe, ela deve vir antecedida por um ponto */
@@ -27,13 +28,13 @@ body {
 
 /* Para colocar os elementos lado a lado, como demanda o projeto, devemos utilizar uma classe no elemento maior (main) e chamá-la através do seletor de classe.*/
 .apresentacao {
-  margin: 10% 15%;
+  margin: 8% 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* margin: Será necessário atribuir uma margem para tirar os elementos das extremidades das telas, com valor de 10% na vertical e 15% da horizontal para se aproximar do projeto do figma */
+/* margin: Será necessário atribuir uma margem para tirar os elementos das extremidades das telas, com valor de 8% na vertical e 15% da horizontal para se aproximar do projeto do figma */
 /* display: flex - Por padrão, por se tratar do elemento pai, ele coloca os elementos em sentido de linha - horizontal (row), mas pode colocá-lo como coluna, por exemplo */
 /* align-items: center - Para fazer o alinhamento vertical dos elementos (filhos) no centro da box (em relação ao elemento pai - main). Essa propriedade irá alinhar os elementos em relação ao maior destes elementos (como uma imagem), que irá definir o ponto central de alinhamento dos demais elementos */
 /* justify-content: space-between - Neste caso, cada elemento filho será jogado para uma extremidade do container e atribuirá um espaço entre eles */
@@ -130,3 +131,16 @@ body {
 
 /* background-color: #272727 - irá mudar o background do botão quando passar o mouse por cima */
 /* border: 2px solid #F6F6F6; - irá mudar a borda do botão quando passar o mouse por cima*/
+
+.rodape {
+  padding: 24px;
+  color: #000000;
+  background-color: #22D4FD;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* padding: 24px; - espaçamento entre a borda e o conteúdo do texto */
+/* text-align: center - alinhamento do texto no meio do elemento */
