@@ -1,0 +1,92 @@
+/* Para importar as fontes, devemos inserir os links de importação no início do CSS */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@100..900&display=swap');
+
+/* Resetar o padrão que já vem nos navegadores, aplicando tais propriedades a todos os elementos da página */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* margin - margem externa / padding - espaçamento entre a borda e o conteúdo */
+
+/* Para selecionar a tag "body", onde está todo o conteúdo principal da página */
+body {
+  height: 100vh; 
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #F6F6F6;
+}
+/* height: 100vh; - A altura da nossa tela está sendo definida para 100% da nossa viewport (ou seja, 100% da tela do nosso navegador) */
+/* box-sizing: border-box; - Irá garantir que o elemento filho seja contido no elemento pai, contabilizando as bordas e preenchimentos do elemento */
+
+/* Para selecionar uma classe, ela deve vir antecedida por um ponto */
+.titulo-destaque {
+  color: #22D4FD;
+}
+
+/* Para colocar os elementos lado a lado, como demanda o projeto, devemos utilizar uma classe no elemento maior (main) e chamá-la através do seletor de classe.*/
+.apresentacao {
+  margin: 10% 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* margin: Será necessário atribuir uma margem para tirar os elementos das extremidades das telas, com valor de 10% na vertical e 15% da horizontal para se aproximar do projeto do figma */
+/* display: flex - Por padrão, por se tratar do elemento pai, ele coloca os elementos em sentido de linha - horizontal (row), mas pode colocá-lo como coluna, por exemplo */
+/* align-items: center - Para fazer o alinhamento vertical dos elementos (filhos) no centro da box (em relação ao elemento pai - main). Essa propriedade irá alinhar os elementos em relação ao maior destes elementos (como uma imagem), que irá definir o ponto central de alinhamento dos demais elementos */
+/* justify-content: space-between - Neste caso, cada elemento filho será jogado para uma extremidade do container e atribuirá um espaço entre eles */
+
+.apresentacao__conteudo {
+  width: 615px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+/* width: 615px - largura do elemento baseado no projeto do figma (valores extraídos de lá e utilizados em pixels - px) */
+/* display: flex - Por padrão, por se tratar do elemento pai, ele coloca os elementos em sentido de linha - horizontal (row), mas pode colocá-lo como coluna, por exemplo */
+/* flex-direction: column; - ele muda o sentido dos elementos de linha para coluna, para poder determinar o espaçamento entre eles*/
+/* gap: 40px - ele irá definir o espaçamento entre os elementos filhos, que neste caso é de 40px, conforme o projeto do figma */
+
+.apresentacao__conteudo__titulo {
+  font-size: 36px;
+  font-family: "Krona One", sans-serif;
+}
+/* font-size: 36px - definirá o tamanho da fonte baseado no projeto do figma*/
+/* font-family: "Krona One", sans-serif; - irá importar a fonte que habilitamos no início do CSS a partir do Google Fonts */
+
+.apresentacao__conteudo__texto {
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+/* font-size: 24px - definirá o tamanho da fonte baseado no projeto do figma*/
+/* font-family: "Montserrat", sans-serif; - irá importar a fonte que habilitamos no início do CSS a partir do Google Fonts */
+
+.apresentacao__links {
+  display: flex;
+  justify-content: space-between;
+
+}
+/* display: flex - Por padrão, por se tratar do elemento pai, ele coloca os elementos em sentido de linha - horizontal (row), mas pode colocá-lo como coluna, por exemplo */
+/* justify-content: space-between - Neste caso, cada elemento filho será jogado para uma extremidade do container e atribuirá um espaço entre eles */
+
+.apresentacao__links__link {
+  background-color: #22D4FD;
+  width: 280px;
+  text-align: center;
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 21.5px 0;
+  text-decoration: none;
+  color:#000000;
+  font-family: "Montserrat", sans-serif;
+}
+/* background-color: #22D4FD - propriedade e valor hexadecimal extraídos do projeto do figma*/
+/* width: 280px - largura do elemento baseado no projeto do figma (valores extraídos de lá e utilizados em pixels - px) */
+/* text-align: center - alinhamento do texto no meio do elemento */
+/* border-radius: 16px; - arredondamento da borda, com valores extraídos do figma */
+/* font-size: 24px - definirá o tamanho da fonte baseado no projeto do figma*/
+/* font-weight: 600; - definirá o peso da fonte baseado no projeto do figma*/
+/* padding: 21.5px 0; - para verificar o valor do padding no figma, você deve selecionar o conteúdo e apertar a tecla ALT, assim mostrará os valores de padding para aquele conteúdo em relação a margem. Quando você quer definir o padding na vertical e horizontal, devemos saber que o primeiro valor é para o padding vertical e o segundo valor, horizontal. Como no projeto só estamos buscando o vertical, então preenchemos somente o primeiro campo, deixando o segundo zerado. */
+/* text-decoration: none; - para remover qualquer decoração do texto por padrão, como o sublinhado do link de redirecionamento */
+/* color: #000000; - definindo a cor da fonte conforme o projeto figma */
+/* font-family: "Montserrat", sans-serif; - irá importar a fonte que habilitamos no início do CSS a partir do Google Fonts */
