@@ -88,6 +88,9 @@ body {
   color: #22D4FD;
 }
 
+/* text-decoration: none; - irá remover as propriedades (como o subilinhado do link) */
+/* color: irá atribuir uma cor a tag em questão */
+
 /* Para selecionar uma classe, ela deve vir antecedida por um ponto */
 .titulo-destaque {
   color: #22D4FD;
