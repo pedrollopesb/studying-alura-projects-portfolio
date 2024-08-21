@@ -42,7 +42,10 @@ body {
   font-size: 24px;
   font-weight: 600;
   color: #22D4FD;
+  text-decoration: none;
 }
+
+/* text-decoration: none; - utilizado para remover qualquer estilização, como o sublinhado do link */
 
 .cabecalho__menu__link:hover {
   color: #F6F6F6;
@@ -79,6 +82,11 @@ body {
 
 /* font-size: 36px - definirá o tamanho da fonte baseado no projeto do figma*/
 /* font-family: "Krona One", sans-serif; - irá importar a fonte que habilitamos no início do CSS a partir do Google Fonts */
+
+.apresentacao__conteudo__texto a {
+  text-decoration: none;
+  color: #22D4FD;
+}
 
 /* Para selecionar uma classe, ela deve vir antecedida por um ponto */
 .titulo-destaque {
