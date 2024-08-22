@@ -66,25 +66,27 @@ body {
 }
 
 .apresentacao {
-  margin: 5% 15%;
+  padding: 5% 15%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 82px;
 }
 
-/* margin: Será necessário atribuir uma margem para tirar os elementos das extremidades das telas, com valor de 5% na vertical e 15% da horizontal para se aproximar do projeto do figma */
+/* padding: Será necessário atribuir uma margem para tirar os elementos das extremidades das telas, com valor de 5% na vertical e 15% da horizontal para se aproximar do projeto do figma */
 /* display: flex - Por padrão, por se tratar do elemento pai, ele coloca os elementos em sentido de linha - horizontal (row), mas pode colocá-lo como coluna, por exemplo */
 /* align-items: center - Para fazer o alinhamento vertical dos elementos (filhos) no centro da box (em relação ao elemento pai - main). Essa propriedade irá alinhar os elementos em relação ao maior destes elementos (como uma imagem), que irá definir o ponto central de alinhamento dos demais elementos */
 /* justify-content: space-between - Neste caso, cada elemento filho será jogado para uma extremidade do container e atribuirá um espaço entre eles */
+/* gap: 82px; - estabelecerá uma distância definida no projeto figma entre os elementos filhos da tag main */
 
 .apresentacao__conteudo {
-  width: 615px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-/* width: 615px - largura do elemento baseado no projeto do figma (valores extraídos de lá e utilizados em pixels - px) */
+/* width: 615px - largura do elemento baseado no projeto do figma (valores extraídos de lá e utilizados em pixels - px) - alterado para 50% (responsividade) */
 /* display: flex - Por padrão, por se tratar do elemento pai, ele coloca os elementos em sentido de linha - horizontal (row), mas pode colocá-lo como coluna, por exemplo */
 /* flex-direction: column; - ele muda o sentido dos elementos de linha para coluna, para poder determinar o espaçamento entre eles*/
 /* gap: 40px - ele irá definir o espaçamento entre os elementos filhos, que neste caso é de 40px, conforme o projeto do figma */
@@ -94,7 +96,7 @@ body {
   font-family: var(--fonte-primaria);
 }
 
-/* font-size: 36px - definirá o tamanho da fonte baseado no projeto do figma*/
+/* font-size: 36px - definirá o tamanho da fonte baseado no projeto do figma - alterado para 2.25rem (responsividade)*/
 /* font-family: "Krona One", sans-serif; - irá importar a fonte que habilitamos no início do CSS a partir do Google Fonts */
 
 /* Para selecionar uma classe, ela deve vir antecedida por um ponto */
@@ -115,7 +117,7 @@ body {
   font-family: var(--fonte-secundaria);
 }
 
-/* font-size: 24px - definirá o tamanho da fonte baseado no projeto do figma*/
+/* font-size: 24px - definirá o tamanho da fonte baseado no projeto do figma - alterado para 1.5rem (responsividade)*/
 /* font-family: "Montserrat", sans-serif; - irá importar a fonte que habilitamos no início do CSS a partir do Google Fonts */
 
 .apresentacao__links {
@@ -140,15 +142,15 @@ body {
 
 /* font-family: "Krona-One", sans-serif; - irá importar a fonte que habilitamos no início do CSS a partir do Google Fonts */
 /* font-weight: 400; - definirá o peso da fonte baseado no projeto do figma*/
-/* font-size: 24px - definirá o tamanho da fonte baseado no projeto do figma*/
+/* font-size: 24px - definirá o tamanho da fonte baseado no projeto do figma - alterado para 1.5rem (responsividade) */
 
-.apresentacao__links__link {
+.apresentacao__links__navegacao {
   /* background-color: #22D4FD; */
   display: flex;
   justify-content: center;
   gap: 16px;
   border: 2px solid var(--cor-terciaria);
-  width: 378px;
+  width: 50%;
   text-align: center;
   border-radius: 8px;
   font-size: 1.5rem;
@@ -164,7 +166,7 @@ body {
 /* gap: 16px - ele irá definir o espaçamento entre os elementos filhos, que neste caso é de 16px, conforme o projeto do figma */
 /* background-color: #22D4FD - propriedade e valor hexadecimal extraídos do projeto do figma*/
 /* border: 2px solid #22D4FD; - define a borda do botão, com espessura 2px, sólida, e com a cor definida em projeto*/
-/* width: 280px - largura do elemento baseado no projeto do figma (valores extraídos de lá e utilizados em pixels - px) */
+/* width: 280px - largura do elemento baseado no projeto do figma (valores extraídos de lá e utilizados em pixels - px) - alterado para 50% (responsividade) */
 /* text-align: center - alinhamento do texto no meio do elemento */
 /* border-radius: 16px; - arredondamento da borda, com valores extraídos do figma */
 /* font-size: 24px - definirá o tamanho da fonte baseado no projeto do figma*/
@@ -175,13 +177,19 @@ body {
 /* font-family: "Montserrat", sans-serif; - irá importar a fonte que habilitamos no início do CSS a partir do Google Fonts */
 
 /* Para adicionar o efeito de sombreamento, quando passa o mouse por cima do ícone/botão */
-.apresentacao__links__link:hover {
+.apresentacao__links__navegacao:hover {
   background-color: var(--cor-hover);
   border: 2px solid var(--cor-hover-border);
 }
 
 /* background-color: #272727 - irá mudar o background do botão quando passar o mouse por cima */
 /* border: 2px solid #F6F6F6; - irá mudar a borda do botão quando passar o mouse por cima*/
+
+.apresentacao__imagem {
+  width: 50%;
+}
+
+/* width: 50% - alterando a largura, a imagem altera proporcionalmente a altura (responsividade) para redimensionar conforme o tamanho da tela do usuário */
 
 .rodape {
   padding: 24px;
@@ -195,3 +203,32 @@ body {
 
 /* padding: 24px; - espaçamento entre a borda e o conteúdo do texto */
 /* text-align: center - alinhamento do texto no meio do elemento */
+
+/* Tudo o que colocarmos de classes aqui dentro, irá ser aplicado somente se a condição for verdadeira, ou seja, a largura de tela for no máximo 1200px */
+@media (max-width: 1200px) {
+  .cabecalho {
+    padding: 10%;
+  }
+
+  /* padding: 10% - irá definir o espaçamento entre a borda e o conteúdo do texto do header */
+
+  .cabecalho__menu {
+    justify-content: center;
+  }
+
+  /* justify-content: center; - irá efetuar o alinhamento dos elementos (âncoras) no centro da tela */
+
+  .apresentacao {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+
+  /* flex-direction: column-reverse; - irá definir a disposição do flexbox para coluna, respeitando o modelo do figma e também jogando a imagem para cima do texto (através do valor -reverse) */
+  /* padding: 5%; - para ajustar a distancia do elemento a borda, para o texto preencher melhor o espaço */
+
+  .apresentacao__conteudo {
+    width: auto;
+  }
+
+  /* width: auto; - propriedade que define que você tem determinado espaço de largura e precisa ocupá-lo como um todo */
+}
